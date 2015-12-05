@@ -2,25 +2,72 @@
 <html>
 
 	<head>
-		<style type="text/css">
-		body{
-			margin:  0px;
-			padding: 5px;
-			font-family: Arial, Helvetica, Sans-serif;
-			font-size: 13px;
-		}
-		.popupContainerDiv {
-			width:  400px;
-			height: 225px;
-		}
-		</style>
+		<link rel="stylesheet" type="text/css" href="chromatica.css">
 	</head>
 	<body>
 		<div class="popupContainerDiv">
-		  <input type="checkbox" name="correct">Color Correction<br>
-		  <input type="checkbox" name="rgb">Show RGB Values<br>
-	  	  <input type="checkbox" name="descriptor">Show Color Descriptor<br>	
+
+			<!--Color correction switch-->
+			<div>
+				<div id="color_correct_switch" class="switch floating-text">
+	  				<input id="color_correct" class="cmn-toggle cmn-toggle-round" type="checkbox">
+	  				<label for="color_correct"></label>
+				</div>
+
+				<div class="floating-text">Color Correction</div>
+				
+				<!--Settings button-->
+				<div class="floating-menu">&#9881</div>
+
+				<!--Play and other options button-->
+				<div class="floating-menu">
+					<button type="button">&#9654</button> 
+					<button type="button">&#8744</button>
+				</div>
+			</div>
+		
+			<!--RGB switch-->
+			<div>
+				<div id="rgb_switch" class="switch floating-text">
+	  				<input id="rgb" class="cmn-toggle cmn-toggle-round" type="checkbox">
+	  				<label for="rgb"></label>
+				</div>
+
+				<div class="floating-text">Show RGB Values</div>
+
+			</div>
+		
+			<!--Descriptor switch-->
+			<div>
+				<div id="descriptor_switch" class="switch floating-text">
+	  				<input id="descriptor" class="cmn-toggle cmn-toggle-round" type="checkbox">
+	  				<label for="descriptor"></label>
+				</div>
+
+				<div class="floating-text">Show Color Descriptor</div>
+
+			</div>
+			</br>
+			<div>
+				<form method="post" action="demoform.asp">
+	  				<label for="hue">Hue</label>
+	  				<input type="range" name="hue" id="hue" value="50" min="0" max="100">
+				</form>
+			</div>
+
+			<div>
+				<form method="post" action="demoform.asp">
+	  				<label for="intensity">Intensity</label>
+	  				<input type="range" name="intensity" id="intensity" value="50" min="0" max="100">
+				</form>
+			</div>
+			</br>
+			<a target="_blank" href="http://review-my-design.org/h/share-social.php?mid=98hIfpG1kSLO">feedback</a>
+			<a target="_blank" href="http://colorvisiontesting.com/" class="floating-right">learn more</a>
 		</div>
+
+		
+
 	</body>
 
 </html>
