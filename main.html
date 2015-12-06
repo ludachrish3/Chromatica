@@ -4,6 +4,8 @@
 	<head>
 		<link rel="stylesheet" type="text/css" href="chromatica.css">
 	</head>
+	<script src="script.js"></script>
+
 	<body>
 		<div class="popupContainerDiv">
 
@@ -17,11 +19,12 @@
 				<div class="floating-text">Color Correction</div>
 				
 				<!--Settings button-->
-				<div class="floating-menu">&#9881</div>
+				<a target="_blank" href="settings.html"><div class="floating-menu">&#9881</div></a>
 
 				<!--Play and other options button-->
 				<div class="floating-menu">
-					<button type="button">&#9654</button> 
+					<button id="playButton" type="button">&#9654</button> 
+					<button id="pauseButton" style="display:none;" type="button">| |</button> 
 					<button type="button">&#8744</button>
 				</div>
 			</div>
