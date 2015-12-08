@@ -86,7 +86,7 @@ input.cmn-toggle-round:checked + label:after {
     display: none;
     margin: 0;
     list-style: none;
-    width: 100%;
+    width: 100px;
     padding: 0;
 }
 .dropdown:hover .dropdown-menu {
@@ -100,8 +100,11 @@ input.cmn-toggle-round:checked + label:after {
     display: block;
     padding: 0.2em 0.8em;
     text-decoration: none;
-    background: #CCCCCC;
-    color: #333333;
+    background: #555; 
+    display: block; 
+    color: #fff;
+    text-shadow: 0 -1px 0 #000;
+
 }
 .dropdown a:hover {
     background: #BBBBBB;
