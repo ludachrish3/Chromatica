@@ -19,13 +19,20 @@
 				<div class="floating-text">Color Correction</div>
 				
 				<!--Settings button-->
-				<a target="_blank" href="settings.html"><div class="floating-menu">&#9881</div></a>
+				<a target="_blank" href="settings.html"><div style="margin-left: 2%; margin-top: 1%;" class="floating-menu">&#9881</div></a>
 
 				<!--Play and other options button-->
 				<div class="floating-menu">
 					<button id="playButton" type="button">&#9654</button> 
 					<button id="pauseButton" style="display:none;" type="button">| |</button> 
-					<button type="button">&#8744</button>
+					<div class="dropdown">
+						<button type="button">&#8744</button>
+    					<ul class="dropdown-menu">
+        					<li><a>10 min</a></li>
+        					<li><a>30 min</a></li>
+        					<li><a>60 min</a></li>
+    					</ul>
+					</div>
 				</div>
 			</div>
 		
