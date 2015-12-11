@@ -35,4 +35,40 @@ document.addEventListener('DOMContentLoaded', function() {
 			chrome.tabs.executeScript({code: command});
 		}
 	});
+
+	document.getElementById("saveProfile").addEventListener("click", function() {
+		var color = document.getElementById('color').value;
+		chrome.storage.sync.set({
+			type: color,
+		}, function() {
+			setTimeout(function() {
+				document.getElementById('chromatica').style.display = 'inline';
+				document.getElementById('chooseProfile').style.display = 'none';
+				document.getElementById('chromaticaBody').style.width = '400px';
+				document.getElementById('chromaticaBody').style.height = '150px';
+			}, 750);
+		});
+	});
+
+	document.getElementById("settingsButton").addEventListener("click", function() {
+		chrome.storage.sync.get({
+			type: 'none',
+		}, function(items) {
+			document.getElementById('chromatica').style.display = 'none';
+			document.getElementById('chooseProfile').style.display = 'inline';
+			document.getElementById('color').value = items.type;
+		});	
+	});
+
+
+	chrome.storage.sync.get({
+		type: 'none',
+	}, function(items) {
+		if(items.type == 'none'){
+			document.getElementById('chromatica').style.display = 'none';
+			document.getElementById('chooseProfile').style.display = 'inline';
+		    document.getElementById('color').value = items.type;
+		}
+	});
+
 });

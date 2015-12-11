@@ -1,25 +1,18 @@
 <!doctype html>
 <html>
-
 	<head>
 		<link rel="stylesheet" type="text/css" href="chromatica.css">
 	</head>
 	<script src="script.js"></script>
-
-	<body>
-		<div class="popupContainerDiv">
-
+	<body id="chromaticaBody">
+		<div id="chromatica" class="popupContainerDiv">
 			<!--Color correction switch-->
 			<div>
 				<div id="color_correct_switch" class="switch floating-text">
 	  				<input id="color_correct" class="cmn-toggle cmn-toggle-round" type="checkbox">
 	  				<label for="color_correct"></label>
 				</div>
-
 				<div class="floating-text">Color Correction</div>
-				
-				<!--Settings button-->
-
 				<!--Play and other options button-->
 				<div class="floating-menu" style="margin-right: 5%;">
 					<img id="playButton" style="width:25px;" src="play.jpg"></img> 
@@ -31,30 +24,24 @@
         					<li><a>60 min</a></li>
     					</ul>
 					</div>
-					<a target="_blank" href="settings.html"><img src="settings.png" style="width:25px;"></img></a>
+					<img id="settingsButton" src="settings.png" style="width:25px;"></img>
 				</div>
 			</div>
-		
 			<!--RGB switch-->
 			<div>
 				<div id="rgb_switch" class="switch floating-text">
 	  				<input id="rgb" class="cmn-toggle cmn-toggle-round" type="checkbox">
 	  				<label for="rgb"></label>
 				</div>
-
 				<div class="floating-text">Show RGB Values</div>
-
 			</div>
-		
 			<!--Descriptor switch-->
 			<div>
 				<div id="descriptor_switch" class="switch floating-text">
 	  				<input id="descriptor" class="cmn-toggle cmn-toggle-round" type="checkbox">
 	  				<label for="descriptor"></label>
 				</div>
-
 				<div class="floating-text">Show Color Descriptor</div>
-
 			</div>
 			</br>
 			<div style = "display: table-cell; vertical-align: middle;">
@@ -70,9 +57,13 @@
 			<a target="_blank" href="http://review-my-design.org/h/share-social.php?mid=98hIfpG1kSLO">feedback</a>
 			<a target="_blank" href="http://colorvisiontesting.com/" class="floating-right">learn more</a>
 		</div>
-
-		
-
+		<div class="popupContainerDiv" id="chooseProfile" style="display: none;">
+			Color Blindness Type:
+			<select id="color">
+				<option value="red">Red-Green</option>
+				<option value="blue">Blue-Yellow</option>
+			</select>
+			<button id="saveProfile">Save</button>
+		</div>
 	</body>
-
 </html>
